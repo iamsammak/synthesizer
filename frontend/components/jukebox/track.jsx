@@ -8,8 +8,10 @@ class Track extends React.Component {
   render () {
     return (
       <div>
-        <p>{this.props.track.name}</p>
-        <button onClick={this.props.onPlay} disabled={this.props.isRecording}>Play</button>
+        <div className='track'>
+          <h4>{this.props.track.name}</h4>
+          <button onClick={this.props.onPlay} disabled={this.props.isRecording}>Play</button>
+        </div>
       </div>
     );
   }

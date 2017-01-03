@@ -37580,14 +37580,18 @@
 	        'div',
 	        null,
 	        _react2.default.createElement(
-	          'p',
-	          null,
-	          this.props.track.name
-	        ),
-	        _react2.default.createElement(
-	          'button',
-	          { onClick: this.props.onPlay, disabled: this.props.isRecording },
-	          'Play'
+	          'div',
+	          { className: 'track' },
+	          _react2.default.createElement(
+	            'h4',
+	            null,
+	            this.props.track.name
+	          ),
+	          _react2.default.createElement(
+	            'button',
+	            { onClick: this.props.onPlay, disabled: this.props.isRecording },
+	            'Play'
+	          )
 	        )
 	      );
 	    }

@@ -7,7 +7,7 @@ class App extends React.Component {
   render () {
     return (
       <main>
-        <h1>synth</h1>
+        <h1>Keyboard Synthesizer</h1>
         <SynthContainer />
         <RecorderContainer />
         <JukeboxContainer />

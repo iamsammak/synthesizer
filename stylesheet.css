@@ -19,7 +19,8 @@ main > div {
 }
 
 body {
-  font-family: 'Share Tech Mono', monospace;
+  /*font-family: 'Share Tech Mono', monospace;*/
+  font-family: 'Quicksand';
 }
 
 h1 {
@@ -56,21 +57,31 @@ p {
   color: white;
 }
 
+.recorder {
+  flex-direction: column;
+}
+
 .recorder-title {
   font-size: 30px;
 }
 
 button {
-    background-color: #51e228; /* Green */
-    border: none;
+    background-color: #51e228;
+    border: 1px solid white;
     color: white;
     padding: 5px 20px;
     text-align: center;
     display: inline-block;
     font-size: 16px;
-    margin: 5px;
+    margin: auto;
+    width: 100px;
+    margin-bottom: 5px;
+}
+
+.start-button {
+  margin-top: 5px;
 }
 
 button:disabled {
-  background-color: #299e09;
+  background-color: #FF2B22;
 }

@@ -22727,52 +22727,56 @@
 	  value: true
 	});
 	var TONES = exports.TONES = {
-	  // 'A': 75,
-	  'a': 100,
-	  // 'S': 150,
-	  's': 200,
-	  // 'D': 225,
-	  'd': 300,
-	  // 'F': 300,
-	  'f': 400,
-	  // 'G': 375,
-	  'g': 500,
-	  // 'H': 450,
-	  'h': 600,
-	  // 'I': 525,
-	  'i': 700,
-	  // 'J': 600,
-	  'j': 800,
-	  // 'K': 675,
-	  'k': 900,
-	  // 'L': 750,
-	  'l': 1000,
-	  ';': 1100,
-	  "'": 1200,
-	  'Enter': 1300
+	  'q': 75,
+	  'w': 100,
+	  'e': 150,
+	  'r': 200,
+	  't': 250,
+	  'y': 300,
+	  'u': 350,
+	  'i': 400,
+	  'o': 450,
+	  'p': 500,
+	  '[': 550,
+	  ']': 600,
+	
+	  'a': 650,
+	  's': 700,
+	  'd': 750,
+	  'f': 800,
+	  'g': 850,
+	  'h': 900,
+	  'j': 950,
+	  'k': 1000,
+	  'l': 1100,
+	  ";": 1200,
+	  "'": 1300
+	
+	  // 'z',
+	  // 'x',
+	  // 'c',
+	  // 'v',
+	  // 'b',
+	  // 'n',
+	  // 'm'
+	  // ",",
+	  // ".",
+	  // "/"
 	};
 	
-	var NOTE_NAMES = exports.NOTE_NAMES = [
-	// 'A',
-	'a',
-	// 'S',
-	's',
-	// 'D',
-	'd',
-	// 'F',
-	'f',
-	// 'G',
-	'g',
-	// 'H',
-	'h',
-	// 'I',
-	'i',
-	// 'J',
-	'j',
-	// 'K',
-	'k',
-	// 'L',
-	'l', ';', "'", 'Enter'];
+	var NOTE_NAMES = exports.NOTE_NAMES = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', "'"
+	
+	// 'z',
+	// 'x',
+	// 'c',
+	// 'v',
+	// 'b',
+	// 'n',
+	// 'm'
+	// ",",
+	// ".",
+	// "/"
+	];
 
 /***/ },
 /* 205 */
@@ -26905,7 +26909,7 @@
 	        _react2.default.createElement(
 	          'h1',
 	          null,
-	          'synth'
+	          'Keyboard Synthesizer'
 	        ),
 	        _react2.default.createElement(_synth_container2.default, null),
 	        _react2.default.createElement(_recorder_container2.default, null),
@@ -37532,9 +37536,13 @@
 	      null,
 	      'Jukebox'
 	    ),
-	    Object.keys(tracks).map(function (id, idx) {
-	      return _react2.default.createElement(_track2.default, { key: idx, track: tracks[id], onPlay: onPlay(tracks[id]), isRecording: isRecording });
-	    })
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'track-container' },
+	      Object.keys(tracks).map(function (id, idx) {
+	        return _react2.default.createElement(_track2.default, { key: idx, track: tracks[id], onPlay: onPlay(tracks[id]), isRecording: isRecording });
+	      })
+	    )
 	  );
 	};
 	
